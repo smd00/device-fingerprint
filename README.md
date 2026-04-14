@@ -48,16 +48,6 @@ const id = generateServerDeviceFingerprint({
 
 Fingerprinting can be regulated (e.g. GDPR/ePrivacy). Disclose it in your privacy policy and use it only for purposes you document.
 
-## Publish to npm
-
-```bash
-npm install
-npm run build
-npm publish --access public
-```
-
-(`--access public` is required once for scoped packages.)
-
 ## License
 
 MIT
