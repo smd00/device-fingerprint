@@ -1,5 +1,7 @@
 # device-fingerprint
 
+**npm:** [`@smd00/device-fingerprint`](https://www.npmjs.com/package/@smd00/device-fingerprint) — the unscoped name `device-fingerprint` was already taken on npm (another package since 2017), so this library is published under the `@smd00` scope. If your npm username is not `smd00`, change the scope in `package.json` to match before publishing.
+
 Lightweight browser device fingerprint: navigator/screen/timezone signals plus canvas and WebGL snippets, hashed to a short `device_*` id. Includes **`collectDeviceData`** (client) and **`generateServerDeviceFingerprint`** (server) so you can recompute the same id from posted JSON.
 
 Personal / experimental package — updates when needed. Not a substitute for dedicated identity products if you need high accuracy.
@@ -7,7 +9,7 @@ Personal / experimental package — updates when needed. Not a substitute for de
 ## Install
 
 ```bash
-npm install device-fingerprint
+npm install @smd00/device-fingerprint
 ```
 
 ## Usage
@@ -18,7 +20,7 @@ npm install device-fingerprint
 import {
   collectDeviceData,
   generateDeviceFingerprint,
-} from "device-fingerprint";
+} from "@smd00/device-fingerprint";
 
 const id = generateDeviceFingerprint();
 
@@ -29,7 +31,7 @@ const payload = collectDeviceData();
 **Server**
 
 ```ts
-import { generateServerDeviceFingerprint } from "device-fingerprint";
+import { generateServerDeviceFingerprint } from "@smd00/device-fingerprint";
 
 const id = generateServerDeviceFingerprint({
   ...bodyFromClient,
@@ -41,19 +43,15 @@ const id = generateServerDeviceFingerprint({
 
 Fingerprinting can be regulated (e.g. GDPR/ePrivacy). Disclose it in your privacy policy and use it only for purposes you document.
 
-## Publish to npm (first time)
-
-1. [Create an npm account](https://www.npmjs.com/signup) and log in: `npm login`
-2. If the name `device-fingerprint` is already taken on npm, use a scoped name in `package.json` (e.g. `@smd00/device-fingerprint`) and publish with `npm publish --access public`
-3. From this directory:
+## Publish to npm
 
 ```bash
 npm install
 npm run build
-npm publish
+npm publish --access public
 ```
 
-(Use `npm publish --access public` for scoped packages.)
+(`--access public` is required once for scoped packages.)
 
 ## License
 
