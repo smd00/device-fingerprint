@@ -1,6 +1,6 @@
 {
   "name": "@smd00/device-fingerprint",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Lightweight browser device fingerprint: canvas, WebGL, and navigator signals with optional server-side hashing",
   "license": "MIT",
   "author": "",

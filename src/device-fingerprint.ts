@@ -73,10 +73,11 @@ export type DeviceData = {
 };
 
 /**
- * Collect device characteristics for server-side fingerprinting
- * (send the result to your API, then hash with `generateServerDeviceFingerprint`).
+ * Collect device characteristics synchronously (browser APIs used are sync).
+ * Prefer {@link collectDeviceData} with `await` at call sites so the API stays
+ * extensible if future signals become async (e.g. Permissions API).
  */
-export function collectDeviceData(): DeviceData {
+export function collectDeviceDataSync(): DeviceData {
   if (typeof window === "undefined") {
     return {
       userAgent: "server-side",
@@ -142,6 +143,14 @@ export function collectDeviceData(): DeviceData {
     webglVendor,
     webglRenderer,
   };
+}
+
+/**
+ * Same as {@link collectDeviceDataSync}, wrapped in a Promise for `await` ergonomics
+ * and forward compatibility with async browser APIs.
+ */
+export async function collectDeviceData(): Promise<DeviceData> {
+  return collectDeviceDataSync();
 }
 
 export type ServerFingerprintInput = {

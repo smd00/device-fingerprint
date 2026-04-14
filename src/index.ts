@@ -1,5 +1,6 @@
 export {
   collectDeviceData,
+  collectDeviceDataSync,
   generateDeviceFingerprint,
   generateServerDeviceFingerprint,
 } from "./device-fingerprint";
