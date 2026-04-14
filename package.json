@@ -1,13 +1,17 @@
 {
-  "name": "ma-device-fingerprint",
+  "name": "device-fingerprint",
   "version": "0.1.0",
   "description": "Lightweight browser device fingerprint: canvas, WebGL, and navigator signals with optional server-side hashing",
   "license": "MIT",
   "author": "",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/smd00/device-fingerprint.git"
   },
+  "bugs": {
+    "url": "https://github.com/smd00/device-fingerprint/issues"
+  },
+  "homepage": "https://github.com/smd00/device-fingerprint#readme",
   "keywords": [
     "fingerprint",
     "device-fingerprint",

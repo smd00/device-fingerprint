@@ -1,4 +1,4 @@
-# ma-device-fingerprint
+# device-fingerprint
 
 Lightweight browser device fingerprint: navigator/screen/timezone signals plus canvas and WebGL snippets, hashed to a short `device_*` id. Includes **`collectDeviceData`** (client) and **`generateServerDeviceFingerprint`** (server) so you can recompute the same id from posted JSON.
 
@@ -7,7 +7,7 @@ Personal / experimental package — updates when needed. Not a substitute for de
 ## Install
 
 ```bash
-npm install ma-device-fingerprint
+npm install device-fingerprint
 ```
 
 ## Usage
@@ -18,7 +18,7 @@ npm install ma-device-fingerprint
 import {
   collectDeviceData,
   generateDeviceFingerprint,
-} from "ma-device-fingerprint";
+} from "device-fingerprint";
 
 const id = generateDeviceFingerprint();
 
@@ -29,7 +29,7 @@ const payload = collectDeviceData();
 **Server**
 
 ```ts
-import { generateServerDeviceFingerprint } from "ma-device-fingerprint";
+import { generateServerDeviceFingerprint } from "device-fingerprint";
 
 const id = generateServerDeviceFingerprint({
   ...bodyFromClient,
@@ -44,17 +44,16 @@ Fingerprinting can be regulated (e.g. GDPR/ePrivacy). Disclose it in your privac
 ## Publish to npm (first time)
 
 1. [Create an npm account](https://www.npmjs.com/signup) and log in: `npm login`
-2. If the name `ma-device-fingerprint` is taken, change `"name"` in `package.json` (e.g. `@your-username/device-fingerprint`)
-3. Set `repository.url` and `author` in `package.json` if you like
-4. From this directory:
+2. If the name `device-fingerprint` is already taken on npm, use a scoped name in `package.json` (e.g. `@smd00/device-fingerprint`) and publish with `npm publish --access public`
+3. From this directory:
 
 ```bash
 npm install
 npm run build
-npm publish --access public
+npm publish
 ```
 
-(Scoped packages like `@scope/name` need `--access public` once.)
+(Use `npm publish --access public` for scoped packages.)
 
 ## License
 
