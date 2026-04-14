@@ -1,0 +1,42 @@
+{
+  "name": "ma-device-fingerprint",
+  "version": "0.1.0",
+  "description": "Lightweight browser device fingerprint: canvas, WebGL, and navigator signals with optional server-side hashing",
+  "license": "MIT",
+  "author": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "fingerprint",
+    "device-fingerprint",
+    "browser",
+    "canvas",
+    "webgl",
+    "fraud"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  }
+}
