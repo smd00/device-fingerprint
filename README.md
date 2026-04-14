@@ -1,6 +1,9 @@
 # device-fingerprint
 
-**npm:** [`@smd00/device-fingerprint`](https://www.npmjs.com/package/@smd00/device-fingerprint) — the unscoped name `device-fingerprint` was already taken on npm (another package since 2017), so this library is published under the `@smd00` scope. If your npm username is not `smd00`, change the scope in `package.json` to match before publishing.
+[![npm version](https://img.shields.io/npm/v/@smd00/device-fingerprint.svg?label=npm&logo=npm)](https://www.npmjs.com/package/@smd00/device-fingerprint)
+[![npm downloads](https://img.shields.io/npm/dm/@smd00/device-fingerprint.svg?label=downloads&logo=npm)](https://www.npmjs.com/package/@smd00/device-fingerprint)
+
+**[Install from npm → `@smd00/device-fingerprint`](https://www.npmjs.com/package/@smd00/device-fingerprint)**
 
 Lightweight browser device fingerprint: navigator/screen/timezone signals plus canvas and WebGL snippets, hashed to a short `device_*` id. Includes **`collectDeviceData`** (client) and **`generateServerDeviceFingerprint`** (server) so you can recompute the same id from posted JSON.
 
